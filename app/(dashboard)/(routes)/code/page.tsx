@@ -22,7 +22,7 @@ import { cn } from "@/lib/utils";
 import UserAvatar from "@/components/UserAvatar";
 import BotAvatar from "@/components/BotAvatar";
 
-const ConversationPage = () => {
+const CodePage = () => {
   const router = useRouter();
 
   const [messages, setmessages] = useState<ChatCompletionMessage[]>([]);
@@ -62,7 +62,7 @@ const ConversationPage = () => {
   return (
     <div>
       <Heading
-        title="Conversation"
+        title="Code Generation"
         description="Our most advanced chatting model."
         icon={MessageSquare}
         iconColor="text-violet-500"
@@ -130,4 +130,4 @@ const ConversationPage = () => {
   );
 };
 
-export default ConversationPage;
+export default CodePage;
