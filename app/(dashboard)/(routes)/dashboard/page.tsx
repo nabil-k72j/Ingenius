@@ -50,7 +50,7 @@ const tools = [
   },
 ];
 
-const dashboardPage = () => {
+const DashboardPage = () => {
   const router = useRouter();
   return (
     <div className="">
@@ -84,4 +84,4 @@ const dashboardPage = () => {
     </div>
   );
 };
-export default dashboardPage;
+export default DashboardPage;
