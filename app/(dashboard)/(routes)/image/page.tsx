@@ -31,6 +31,7 @@ import {
 } from "@/components/ui/select";
 import { Card, CardFooter } from "@/components/ui/card";
 import { useProModal } from "@/hooks/UseProModal";
+import toast from "react-hot-toast";
 
 const ConversationPage = () => {
   const proModal = useProModal();
@@ -62,6 +63,8 @@ const ConversationPage = () => {
     } catch (error: any) {
       if (error?.response?.status === 403) {
         proModal.onOpen();
+      } else {
+        toast.error("something went wrong");
       }
     } finally {
       router.refresh();

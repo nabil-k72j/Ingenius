@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import ModalProvider from "@/components/ModalProvider";
+import ToasterProvider from "@/components/ToasterProvider";
+import CrispProvider from "@/components/CrispProvider";
 
 export const metadata: Metadata = {
   title: "Ingenius",
@@ -16,8 +18,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <CrispProvider />
         <body>
           <ModalProvider />
+          <ToasterProvider />
           {children}
         </body>
       </html>
