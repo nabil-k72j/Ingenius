@@ -51,7 +51,7 @@ const routes = [
 ];
 
 interface sidebarProps {
-  apiLimitCount: number;
+  apiLimitCount?: number;
 }
 
 const Sidebar = ({ apiLimitCount = 0 }: sidebarProps) => {
